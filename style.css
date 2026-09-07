@@ -192,3 +192,34 @@ body::before {
 .hover\:text-green-400:hover {
     text-shadow: 0 0 10px var(--tertiary);
 }
+
+/* --- TAMBAHAN WARNA VARIASI TOOLS --- */
+
+/* Hover Nav Tools (Kuning) */
+.nav-tools { color: #a1a1aa; }
+.nav-tools:hover {
+    color: #fcee0a !important; 
+    text-shadow: 0 0 10px #fcee0a, 0 0 20px rgba(252, 238, 10, 0.5);
+}
+
+/* Box Red */
+.box-red:hover { 
+    border-color: #ff003c; 
+    box-shadow: 0 0 15px rgba(255, 0, 60, 0.3); 
+}
+
+/* Box Yellow */
+.box-yellow:hover { 
+    border-color: #fcee0a; 
+    box-shadow: 0 0 15px rgba(252, 238, 10, 0.3); 
+}
+
+/* Memastikan teks warna di dalam box */
+.text-magenta { color: var(--secondary); }
+.text-cyan { color: var(--primary); }
+.text-green { color: var(--tertiary); }
+
+/* Custom Ikon Ghidra (naga) menggunakan font-awesome dragon */
+.fa-dragon {
+    filter: drop-shadow(0 0 5px var(--secondary));
+}
