@@ -1,0 +1,164 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Rajdhani:wght@500;700&display=swap');
+
+:root {
+    --primary: #00f2ff;    /* Cyan */
+    --secondary: #ff00ff;  /* Magenta/Pink */
+    --tertiary: #39ff14;   /* Neon Green */
+    --danger: #ff003c;     /* Red/Pink */
+    --bg-dark: #050505;
+    --card-bg: #0a0a0a;
+    --border: #1a1a1a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: #e0e0e0;
+    font-family: 'Rajdhani', sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/* Background Grid */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: 
+        linear-gradient(to right, #111 1px, transparent 1px),
+        linear-gradient(to bottom, #111 1px, transparent 1px);
+    background-size: 45px 45px;
+    z-index: -1;
+}
+
+.text-magenta { color: var(--secondary); text-shadow: 0 0 10px var(--secondary); }
+.text-cyan { color: var(--primary); text-shadow: 0 0 10px var(--primary); }
+.text-green { color: var(--tertiary); text-shadow: 0 0 10px var(--tertiary); }
+
+.cyber-text {
+    font-family: 'Fira Code', monospace;
+}
+
+.cyber-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+}
+
+/* Variasi Hover Box */
+.box-cyan:hover { border-color: var(--primary); box-shadow: 0 0 15px rgba(0, 242, 255, 0.2); }
+.box-magenta:hover { border-color: var(--secondary); box-shadow: 0 0 15px rgba(255, 0, 255, 0.2); }
+.box-green:hover { border-color: var(--tertiary); box-shadow: 0 0 15px rgba(57, 255, 20, 0.2); }
+
+/* Profile Section */
+.profile-img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border: 2px solid var(--secondary);
+    clip-path: polygon(15% 0, 100% 0, 100% 85%, 85% 100%, 0 100%, 0 15%);
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
+}
+
+/* Social Badges */
+.btn-social {
+    background: #000;
+    border: 1px solid #222;
+    color: #fff;
+    padding: 10px 18px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+    font-family: 'Fira Code', monospace;
+}
+
+.btn-social:hover {
+    border-color: var(--secondary);
+    color: var(--secondary);
+    transform: scale(1.05);
+}
+
+/* Timeline Experience */
+.timeline-line { border-left: 2px solid #1a1a1a; }
+.dot-cyan { background: var(--primary); box-shadow: 0 0 10px var(--primary); }
+.dot-magenta { background: var(--secondary); box-shadow: 0 0 10px var(--secondary); }
+.dot-green { background: var(--tertiary); box-shadow: 0 0 10px var(--tertiary); }
+
+.timeline-dot {
+    position: absolute;
+    left: -25px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+}
+
+/* Skill Tags */
+.tag-cyan { border: 1px solid var(--primary); color: var(--primary); }
+.tag-magenta { border: 1px solid var(--secondary); color: var(--secondary); }
+.tag-green { border: 1px solid var(--tertiary); color: var(--tertiary); }
+
+.skill-tag {
+    display: inline-block;
+    padding: 4px 12px;
+    font-size: 11px;
+    margin: 4px;
+    font-family: 'Fira Code', monospace;
+    background: rgba(0,0,0,0.5);
+}
+
+/* Modal View */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 100;
+    left: 0; top: 0; width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.95);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    border: 2px solid var(--secondary);
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px; right: 30px;
+    color: var(--secondary);
+    font-size: 30px;
+    cursor: pointer;
+}
+/* Tambahkan ini di style.css */
+.text-cyber-red {
+    color: #ff003c; /* Warna Merah Cyberpunk */
+    text-shadow: 0 0 10px #ff003c, 0 0 20px rgba(255, 0, 60, 0.5);
+}
+
+/* Modifikasi pada profile-img untuk menyesuaikan jika ingin border merah juga */
+.profile-img {
+    border: 2px solid #3e0fe6; /* Mengubah border foto jadi merah agar senada */
+    box-shadow: 0 0 20px rgba(255, 0, 60, 0.3);
+}
+/* Tambahkan atau pastikan class ini ada di style.css */
+.text-cyber-orange {
+    color: #ff8c00; /* Bright Neon Orange */
+    text-shadow: 0 0 10px #ff8c00, 0 0 20px rgba(255, 140, 0, 0.5);
+}
+/* Warna Kuning Cyberpunk untuk Logo Navigasi */
+.text-cyber-yellow {
+    color: #fcee0a; /* Kuning Khas Cyberpunk 2077 */
+    text-shadow: 0 0 10px #fcee0a, 0 0 20px rgba(252, 238, 10, 0.5);
+    font-family: 'Fira Code', monospace;
+}
