@@ -162,3 +162,33 @@ body::before {
     text-shadow: 0 0 10px #fcee0a, 0 0 20px rgba(252, 238, 10, 0.5);
     font-family: 'Fira Code', monospace;
 }
+/* Custom Hover Navigation */
+.nav-about, .nav-cert {
+    color: #a1a1aa; /* Warna abu-abu default (zinc-400) */
+}
+
+/* Custom Hover Navigation - About (Cyber Red) */
+.nav-about {
+    color: #a1a1aa; /* Warna default zinc-400 */
+}
+.nav-about:hover {
+    color: #ff003c !important; /* Cyber Red */
+    text-shadow: 0 0 10px #ff003c, 0 0 20px rgba(255, 0, 60, 0.5);
+}
+
+/* Custom Hover Navigation - Certificates (Cyber Orange) */
+.nav-cert {
+    color: #a1a1aa; /* Warna default zinc-400 */
+}
+.nav-cert:hover {
+    color: #ff8c00 !important; /* Cyber Orange */
+    text-shadow: 0 0 10px #ff8c00, 0 0 20px rgba(255, 140, 0, 0.5);
+}
+
+/* Menambahkan efek glow pada Experience & Skills agar seragam */
+.hover\:text-cyan-400:hover {
+    text-shadow: 0 0 10px var(--primary);
+}
+.hover\:text-green-400:hover {
+    text-shadow: 0 0 10px var(--tertiary);
+}
