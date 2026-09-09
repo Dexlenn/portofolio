@@ -12,27 +12,42 @@
 </head>
 <body>
 
-    <!-- Navigasi -->
-<nav class="fixed w-full z-50 bg-black/90 border-b border-white/5 py-5">
-<div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
-    <div class="cyber-text font-bold text-lg tracking-widest text-cyber-yellow">L3IDEN</div>
-    <div class="hidden md:flex gap-8 text-[11px] uppercase tracking-[0.3em]">
-        <!-- Ganti class di sini -->
-        <a href="#about" onclick="scrollToSection(event, 'about')" class="nav-about transition">/About</a>
-        <a href="#experience" onclick="scrollToSection(event, 'experience')" class="hover:text-cyan-400 transition">/Experience</a>
-        <a href="#skills" onclick="scrollToSection(event, 'skills')" class="hover:text-green-400 transition">/Skills</a>
-        <a href="#tools" onclick="scrollToSection(event, 'tools')" class="nav-tools transition">/Tools</a>
-        <a href="#certificates" onclick="scrollToSection(event, 'certificates')" class="nav-cert transition">/Certificates</a>
+ <!-- Navigasi -->
+<nav class="fixed w-full z-50 bg-black/95 border-b border-white/10 py-5">
+    <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
+        <!-- Logo -->
+        <div class="cyber-text font-bold text-lg tracking-widest text-cyber-yellow">L3IDEN</div>
+        
+        <!-- Hamburger Button (Hanya tampil di Mobile/Tablet) -->
+        <button id="menu-btn" class="md:hidden text-cyber-yellow focus:outline-none">
+            <i class="fas fa-bars text-2xl"></i>
+        </button>
 
+        <!-- Desktop Menu (Tampil di MD ke atas) -->
+        <div class="hidden md:flex gap-8 text-[11px] uppercase tracking-[0.3em]">
+            <a href="#about" onclick="scrollToSection(event, 'about')" class="nav-about transition">/About</a>
+            <a href="#experience" onclick="scrollToSection(event, 'experience')" class="hover:text-cyan-400 transition">/Experience</a>
+            <a href="#skills" onclick="scrollToSection(event, 'skills')" class="hover:text-green-400 transition">/Skills</a>
+            <a href="#tools" onclick="scrollToSection(event, 'tools')" class="nav-tools transition">/Tools</a>
+            <a href="#certificates" onclick="scrollToSection(event, 'certificates')" class="nav-cert transition">/Certificates</a>
+        </div>
     </div>
-</div>
+
+    <!-- Mobile Menu (Hidden by default, muncul saat diklik) -->
+    <div id="mobile-menu" class="hidden md:hidden bg-black/95 border-t border-white/5 mt-4 px-6 py-6 flex flex-col gap-6 text-[12px] uppercase tracking-[0.3em] font-mono">
+        <a href="#about" onclick="scrollToSection(event, 'about')" class="nav-about py-2 border-b border-white/5">/About</a>
+        <a href="#experience" onclick="scrollToSection(event, 'experience')" class="hover:text-cyan-400 py-2 border-b border-white/5">/Experience</a>
+        <a href="#skills" onclick="scrollToSection(event, 'skills')" class="hover:text-green-400 py-2 border-b border-white/5">/Skills</a>
+        <a href="#tools" onclick="scrollToSection(event, 'tools')" class="nav-tools py-2 border-b border-white/5">/Tools</a>
+        <a href="#certificates" onclick="scrollToSection(event, 'certificates')" class="nav-cert py-2 border-b border-white/5">/Certificates</a>
+    </div>
 </nav>
 
     <!-- Header -->
     <header class="pt-40 pb-20 px-6">
         <div class="max-w-4xl mx-auto text-center">
             <img src="image/IMG_20251014_230658_468.webp" alt="Profile" class="profile-img mx-auto mb-10">
-            <h1 class="text-5xl md:text-7xl font-bold mb-4 tracking-tighter uppercase">
+           <h1 class="text-3xl md:text-7xl font-bold mb-4 tracking-tighter uppercase">
     <span class="text-cyber-red">MUHAMAD FADLY</span> <span class="text-cyber-red">RAEHAN</span>
 </h1>
             <p class="text-zinc-200 text-sm md:text-base uppercase tracking-[0.5em] mb-12">
@@ -232,25 +247,53 @@
     <footer class="py-12 border-t border-zinc-900 text-center">
         <p class="text-zinc-600 text-[10px] uppercase tracking-[0.8em]">System_Status: <span class="text-green-400">Secure</span> //<span class="text-cyber-orange"> Muhamad Fadly Raehan 2026</span></p>
     </footer>
-
+    
     <script>
-        function openModal(src) {
-            document.getElementById('imageModal').style.display = "flex";
-            document.getElementById('fullImage').src = src;
+    // Logika Hamburger Menu
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        // Mengganti ikon bars menjadi X saat terbuka
+        const icon = menuBtn.querySelector('i');
+        icon.classList.toggle('fa-bars');
+        icon.classList.toggle('fa-times');
+    });
+
+    function openModal(src) {
+        document.getElementById('imageModal').style.display = "flex";
+        document.getElementById('fullImage').src = src;
+    }
+    
+    function closeModal() {
+        document.getElementById('imageModal').style.display = "none";
+    }
+
+    function scrollToSection(event, sectionId) {
+        event.preventDefault();
+        
+        // Tutup menu mobile setelah link diklik
+        mobileMenu.classList.add('hidden');
+        const icon = menuBtn.querySelector('i');
+        icon.classList.add('fa-bars');
+        icon.classList.remove('fa-times');
+
+        const targetElement = document.getElementById(sectionId);
+        if (targetElement) {
+            // Memberikan offset agar tidak tertutup header yang fixed
+            const headerOffset = 80;
+            const elementPosition = targetElement.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth"
+            });
         }
-        function closeModal() {
-            document.getElementById('imageModal').style.display = "none";
-        }
-        function scrollToSection(event, sectionId) {
-            event.preventDefault();
-            const targetElement = document.getElementById(sectionId);
-            if (targetElement) {
-                targetElement.scrollIntoView({ behavior: 'smooth' });
-                if (history.pushState) {
-                    history.pushState(null, null, window.location.pathname);
-                }
-            }
-        }
-    </script>
+    }
+</script>
 </body>
+
+
 </html>
