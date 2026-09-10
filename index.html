@@ -243,35 +243,52 @@
 
     <!-- Section Video -->
 <section id="media" class="py-24 px-6">
-    <div class="max-w-4xl mx-auto">
+    <div class="max-w-6xl mx-auto"> <!-- Ukuran diperlebar ke 6xl agar muat 2 video -->
         <!-- Label Judul -->
-        <h2 class="text-cyber-red cyber-text text-sm mb-12 tracking-[0.4em] uppercase">// 05. MEDIA_PROJECT</h2>
+        <h2 class="text-cyber-red cyber-text text-sm mb-12 tracking-[0.4em] uppercase">// 05. MEDIA_PROJECTS</h2>
         
-        <!-- Container Video di Tengah -->
-        <div class="flex justify-center items-center">
-            <div class="cyber-box box-red p-2 w-full max-w-3xl shadow-lg">
-                <div class="relative overflow-hidden" style="padding-top: 56.25%;"> <!-- Aspect Ratio 16:9 -->
-                    <iframe 
-                        class="absolute top-0 left-0 w-full h-full border-0"
-                        src="https://www.youtube.com/embed/02xcOH6XpKc"
-                        title="YouTube video player" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        allowfullscreen>
-                    </iframe>
+        <!-- Container Grid untuk 2 Video -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- VIDEO 1 -->
+            <div class="flex flex-col items-center">
+                <div class="cyber-box box-red p-2 w-full shadow-lg">
+                    <div class="relative overflow-hidden" style="padding-top: 56.25%;">
+                        <iframe 
+                            class="absolute top-0 left-0 w-full h-full border-0"
+                            src="https://www.youtube.com/embed/02xcOH6XpKc" 
+                            title="TryHackMe W1seGuy Walkthrough" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
                 </div>
+                <p class="mt-4 text-zinc-500 font-mono text-[10px] tracking-widest uppercase">
+                    [ Project_01: W1seGuy Walkthrough ]
+                </p>
             </div>
+
+            <!-- VIDEO 2 -->
+            <div class="flex flex-col items-center">
+                <div class="cyber-box box-red p-2 w-full shadow-lg">
+                    <div class="relative overflow-hidden" style="padding-top: 56.25%;">
+                        <iframe 
+                            class="absolute top-0 left-0 w-full h-full border-0"
+                            src="https://www.youtube.com/embed/yvw8S_sw5YA" 
+                            title="Video Project Kedua" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+                <p class="mt-4 text-zinc-500 font-mono text-[10px] tracking-widest uppercase">
+                    [ Project_02: Shells Overview Walkthrough ]
+                </p>
+            </div>
+
         </div>
-        <!-- Caption tambahan di bawah video -->
-        <p class="text-center mt-6 text-zinc-500 font-mono text-[10px] tracking-widest uppercase">
-            [ System_Display: TryHackMe W1seGuy Walkthrough - L3iden ]
-        </p>
     </div>
 </section>
-
-    <div id="imageModal" class="modal" onclick="closeModal()">
-        <span class="close-modal">&times;</span>
-        <img class="modal-content" id="fullImage">
-    </div>
 
     <footer class="py-12 border-t border-zinc-900 text-center">
         <p class="text-zinc-600 text-[10px] uppercase tracking-[0.8em]">System_Status: <span class="text-green-400">Secure</span> //<span class="text-cyber-orange"> Muhamad Fadly Raehan 2026</span></p>
