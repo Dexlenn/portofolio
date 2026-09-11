@@ -26,22 +26,26 @@
         <!-- Desktop Menu (Tampil di MD ke atas) -->
         <div class="hidden md:flex gap-8 text-[11px] uppercase tracking-[0.3em]">
             <a href="#about" onclick="scrollToSection(event, 'about')" class="nav-about transition">/About</a>
+            <a href="#education" onclick="scrollToSection(event, 'education')" class="hover:text-green-400 transition">/Education</a>
             <a href="#experience" onclick="scrollToSection(event, 'experience')" class="hover:text-cyan-400 transition">/Experience</a>
             <a href="#skills" onclick="scrollToSection(event, 'skills')" class="hover:text-green-400 transition">/Skills</a>
             <a href="#tools" onclick="scrollToSection(event, 'tools')" class="nav-tools transition">/Tools</a>
             <a href="#certificates" onclick="scrollToSection(event, 'certificates')" class="nav-cert transition">/Certificates</a>
             <a href="#media" onclick="scrollToSection(event, 'media')" class="hover:text-red-500 transition">/Media</a>
+            <a href="#contact" onclick="scrollToSection(event, 'contact')" class="hover:text-cyan-400 transition">/Contact</a>
         </div>
     </div>
 
     <!-- Mobile Menu (Hidden by default, muncul saat diklik) -->
     <div id="mobile-menu" class="hidden md:hidden bg-black/95 border-t border-white/5 mt-4 px-6 py-6 flex flex-col gap-6 text-[12px] uppercase tracking-[0.3em] font-mono">
         <a href="#about" onclick="scrollToSection(event, 'about')" class="nav-about py-2 border-b border-white/5">/About</a>
+        <a href="#education" onclick="scrollToSection(event, 'education')" class="hover:text-green-400 py-2 border-b border-white/5">/Education</a>
         <a href="#experience" onclick="scrollToSection(event, 'experience')" class="hover:text-cyan-400 py-2 border-b border-white/5">/Experience</a>
         <a href="#skills" onclick="scrollToSection(event, 'skills')" class="hover:text-green-400 py-2 border-b border-white/5">/Skills</a>
         <a href="#tools" onclick="scrollToSection(event, 'tools')" class="nav-tools py-2 border-b border-white/5">/Tools</a>
         <a href="#certificates" onclick="scrollToSection(event, 'certificates')" class="nav-cert py-2 border-b border-white/5">/Certificates</a>
         <a href="#media" onclick="scrollToSection(event, 'media')" class="hover:text-red-500 py-2 border-b border-white/5">/Media</a>
+        <a href="#contact" onclick="scrollToSection(event, 'contact')" class="hover:text-cyan-400 py-2 border-b border-white/5">/Contact</a>
     </div>
 </nav>
 
@@ -74,19 +78,49 @@
                 <p class="text-zinc-250 text-lg mb-6">
                     An aspiring <span class="text-magenta border-b border-magenta">Cybersecurity Analyst & Penetration Tester </span> with practical lab experience in Offensive Security and network defense. Actively sharpening technical skills through simulated enterprise environments on Hack The Box and TryHackMe, with a focus on vulnerability assessment and exploitation. Proficient in leveraging industry-standard tools like Nmap, Metasploit, Burp Suite, and Wireshark to uncover attack surfaces and strengthen system security.
                 </p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs font-mono text-zinc-500">
-                    <div class="text-cyan-400">> LOCATION: JAKARTA, INDONESIA</div>
-                    <div class="text-green-400">> EDUCATION: MERCU BUANA UNIVERSITY</div>
-                    <div class="text-magenta">> EMAIL: LEIDEN444@PROTON.ME</div>
-                    <div class="text-red-400">> PHONE: +6282111120718</div>
+
+
                 </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Section Education -->
+    <section id="education" class="py-24 px-6 bg-black/20">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-cyber-yellow cyber-text text-sm mb-12 tracking-[0.4em] uppercase">// 02. EDUCATION</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Kuliah S1 -->
+                <div class="cyber-box box-yellow p-8 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-30 transition">
+                        <i class="fa-solid fa-microchip text-6xl text-cyan-400"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-xl mb-1 uppercase">Universitas Mercu Buana</h3>
+                    <p class="text-cyber-yellow text-xs mb-4 font-mono tracking-widest">S1 Teknik Informatika | 2022 - 2026</p>
+                    <div class="space-y-2">
+                        <div class="inline-block bg-cyber-yellow/10 border border-cyber-yellow/30 px-3 py-1 rounded">
+                            <span class="text-cyber-yellow font-bold font-mono">GPA: 3.83 / 4.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SMK -->
+                <div class="cyber-box box-cyan p-8 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-30 transition">
+                        <i class="fas fa-microchip text-6xl text-cyan-400"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-xl mb-1 uppercase">SMK Cyber Media Jakarta</h3>
+                    <p class="text-cyan-400 text-xs mb-4 font-mono tracking-widest">Teknik Komputer dan Jaringan | 2020 - 2022</p>
+                </div>
+
             </div>
         </div>
     </section>
 
     <section id="experience" class="py-24 px-6 bg-black/40">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-cyan-400 cyber-text text-sm mb-12 tracking-[0.4em] uppercase">// 02. WORK_EXPERIENCE</h2>
+            <h2 class="text-cyan-400 cyber-text text-sm mb-12 tracking-[0.4em] uppercase">// 03. WORK_EXPERIENCE</h2>
             <div class="ml-4 timeline-line space-y-16">
                 <div class="relative pl-10">
                     <div class="timeline-dot dot-cyan"></div>
@@ -112,7 +146,7 @@
 
     <section id="skills" class="py-24 px-6">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-green-400 cyber-text text-sm mb-12 tracking-[0.4em] uppercase">// 03. SKILLS</h2>
+            <h2 class="text-green-400 cyber-text text-sm mb-12 tracking-[0.4em] uppercase">// 04. SKILLS</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="cyber-box box-cyan p-6">
                     <i class="fas fa-shield-halved text-cyan-400 text-2xl mb-5"></i>
@@ -151,7 +185,7 @@
 <!-- Tambahkan Section Tools ini sebelum Section Certificates -->
 <section id="tools" class="py-24 px-6 bg-black/20">
     <div class="max-w-4xl mx-auto">
-        <h2 class="text-cyber-yellow cyber-text text-sm mb-12 tracking-[0.4em] uppercase">// 04. TOOLS</h2>
+        <h2 class="text-cyber-yellow cyber-text text-sm mb-12 tracking-[0.4em] uppercase">// 05. TOOLS</h2>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
             
             <!-- Metasploit - RED -->
@@ -211,7 +245,7 @@
 </section>
     <section id="certificates" class="py-24 px-6 bg-black/40">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-magenta cyber-text text-sm mb-12 tracking-[0.4em] uppercase">// 04. CERTIFICATES_GALLERY</h2>
+            <h2 class="text-magenta cyber-text text-sm mb-12 tracking-[0.4em] uppercase">// 06. CERTIFICATES_GALLERY</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="cyber-box box-cyan p-2 cursor-pointer group" onclick="openModal('image/THM-UG3JAO4YPL_page-0001.jpg')">
                     <img src="image/THM-UG3JAO4YPL_page-0001.jpg" alt="Cert 1" class="w-full h-40 object-cover opacity-60 group-hover:opacity-100 transition">
@@ -249,7 +283,7 @@
 <section id="media" class="py-24 px-6">
     <div class="max-w-6xl mx-auto"> <!-- Ukuran diperlebar ke 6xl agar muat 2 video -->
         <!-- Label Judul -->
-        <h2 class="text-cyber-red cyber-text text-sm mb-12 tracking-[0.4em] uppercase">// 05. MEDIA_PROJECTS</h2>
+        <h2 class="text-cyber-red cyber-text text-sm mb-12 tracking-[0.4em] uppercase">// 07. TryHackMe: Walkthrough & Writeup</h2>
         
         <!-- Container Grid untuk 2 Video -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -293,10 +327,83 @@
         </div>
     </div>
 </section>
+<!-- Section Contact -->
+<section id="contact" class="py-24 px-6 bg-black/40">
+    <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-cyber-yellow cyber-text text-sm mb-12 tracking-[0.4em] uppercase">// 08. CONTACT_INFORMATION</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <!-- WhatsApp -->
+            <a href="https://wa.me/6282111120718" target="_blank" class="cyber-box box-green p-8 group transition-all duration-500">
+                <i class="fab fa-whatsapp text-green-400 text-4xl mb-4 group-hover:scale-110 transition"></i>
+                <h4 class="text-white font-bold mb-2 uppercase">WhatsApp</h4>
+                <p class="text-[10px] font-mono text-green-400 tracking-widest uppercase">Fast Response</p>
+            </a>
 
-    <footer class="py-12 border-t border-zinc-900 text-center">
-        <p class="text-zinc-600 text-[10px] uppercase tracking-[0.8em]">System_Status: <span class="text-green-400">Secure</span> //<span class="text-cyber-orange"> Muhamad Fadly Raehan 2026</span></p>
-    </footer>
+            <!-- Telegram -->
+            <a href="https://t.me/D3xlen" target="_blank" class="cyber-box box-cyan p-8 group transition-all duration-500">
+                <i class="fab fa-telegram text-cyan-400 text-4xl mb-4 group-hover:scale-110 transition"></i>
+                <h4 class="text-white font-bold mb-2 uppercase">Telegram</h4>
+                <p class="text-[10px] font-mono text-cyan-400 tracking-widest uppercase">Secure Messaging</p>
+            </a>
+
+            <!-- Session Messenger (Private) -->
+        <div class="cyber-box box-magenta p-8 group transition-all duration-500 relative">
+            <i class="fas fa-user-secret text-magenta text-4xl mb-4 group-hover:scale-110 transition"></i>
+            <h4 class="text-white font-bold mb-2 uppercase tracking-widest">Session ID</h4>
+            
+            <!-- Container ID dan Tombol Copy -->
+            <div class="relative mt-4 border-t border-magenta/20 pt-4">
+                <!-- Teks ID -->
+                <p id="sessionID" class="text-[12px] md:text-[14px] font-mono text-magenta break-all uppercase leading-relaxed pr-10">
+                    05422997c6e45a33a2ff8ed0d302e276bd08ff7ca5fe77926a0defdf24399a0866
+                </p>
+
+                <!-- Tombol Ikon Copy -->
+                <button 
+                    onclick="copySessionID()" 
+                    class="absolute top-4 right-0 text-magenta hover:text-white transition-all duration-300 active:scale-90"
+                    title="Copy ID">
+                    <i class="fas fa-copy text-xl"></i>
+                </button>
+            </div>
+        </div> 
+    </div>
+</section>
+
+    <footer class="py-12 border-t border-zinc-800 bg-black/80 text-center">
+    <div class="max-w-4xl mx-auto px-6">
+        <!-- Status Bar -->
+        <div class="mb-6 flex justify-center items-center gap-4 text-[11px] font-mono tracking-[0.3em]">
+            <span class="text-zinc-400">SYSTEM_STATUS:</span>
+            <span class="text-green-400 font-bold drop-shadow-[0_0_5px_rgba(74,222,128,0.5)]">● SECURE</span>
+            <span class="text-zinc-600">|</span>
+            <span class="text-zinc-400">ENCRYPTION:</span>
+            <span class="text-cyan-400 font-bold">ACTIVE</span>
+        </div>
+
+        <!-- Nama dan Copyright -->
+        <p class="text-zinc-300 text-[11px] md:text-[12px] uppercase tracking-[0.6em] leading-relaxed">
+            &copy; 2026 <span class="text-cyber-orange font-bold">Muhamad Fadly Raehan</span>
+        </p>
+
+        <!-- Garis Dekorasi Kecil -->
+        <div class="mt-6 flex justify-center items-center">
+            <div class="h-[1px] w-12 bg-zinc-800"></div>
+            <div class="h-[1px] w-4 bg-cyber-red mx-2"></div>
+            <div class="h-[1px] w-12 bg-zinc-800"></div>
+        </div>
+
+        <!-- Tombol Back to Surface -->
+        <div class="mt-8">
+            <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;" 
+               class="text-[10px] text-zinc-400 hover:text-cyber-yellow transition-all duration-300 uppercase tracking-[0.5em] font-mono inline-block">
+                [ Back to Surface ]
+            </a>
+        </div>
+    </div>
+</footer>
 
     <script>
     // Logika Hamburger Menu
@@ -348,6 +455,48 @@
     <span class="close-modal" onclick="closeModal()" style="position: absolute; top: 20px; right: 35px; color: #f1f1f1; font-size: 40px; font-weight: bold; cursor: pointer;">&times;</span>
     <img class="modal-content" id="fullImage" style="max-width: 80%; max-height: 80%; border: 2px solid #ff00ff; box-shadow: 0 0 20px rgba(255, 0, 255, 0.5);">
 </div>
+
+<!-- Notifikasi Toast (Taruh di mana saja, disarankan di bawah <body>) -->
+<div id="toast" class="fixed bottom-10 left-1/2 -translate-x-1/2 bg-black border border-magenta text-magenta px-6 py-2 z-[100] font-mono text-xs tracking-widest hidden opacity-0 transition-all duration-500 shadow-[0_0_15px_rgba(255,0,255,0.4)]">
+    [ SYSTEM: ID_Berhasil_Disalin ]
+</div>
+
+<script>
+    function copySessionID() {
+        const idText = "05422997c6e45a33a2ff8ed0d302e276bd08ff7ca5fe77926a0defdf24399a0866";
+        
+        // Proses Copy
+        navigator.clipboard.writeText(idText).then(() => {
+            showToast();
+        }).catch(err => {
+            // Fallback untuk browser Android lama yang tidak support navigator.clipboard
+            const textArea = document.createElement("textarea");
+            textArea.value = idText;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+            showToast();
+        });
+    }
+
+    function showToast() {
+        const toast = document.getElementById("toast");
+        toast.classList.remove("hidden");
+        // Animasi muncul
+        setTimeout(() => {
+            toast.classList.add("opacity-100");
+        }, 10);
+
+        // Hilang otomatis setelah 2 detik
+        setTimeout(() => {
+            toast.classList.remove("opacity-100");
+            setTimeout(() => {
+                toast.classList.add("hidden");
+            }, 500);
+        }, 2000);
+    }
+</script>
 </body>
 
 
