@@ -327,6 +327,55 @@
         </div>
     </div>
 </section>
+<!-- Section Project: Samba Server -->
+<section id="projects" class="py-24 px-6 bg-black/20">
+    <div class="max-w-4xl mx-auto">
+        <h2 class="text-cyber-yellow cyber-text text-sm mb-12 tracking-[0.4em] uppercase">// PROJECT: SAMBA FILE SERVER (DEBIAN LINUX)</h2>
+        
+        <!-- Deskripsi Singkat Project -->
+        <div class="mb-10 p-6 border-l-2 border-cyber-yellow bg-white/5">
+            <p class="text-zinc-300 text-sm leading-relaxed">
+                Konfigurasi File Server berbasis Linux Debian menggunakan protokol Samba. Project ini mencakup instalasi, manajemen user (smbpasswd), konfigurasi hak akses direktori (Read/Write), dan pengujian koneksi dari client Windows/Linux.
+            </p>
+        </div>
+
+        <!-- Galeri Foto Dokumentasi -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <!-- Foto 1: Konfigurasi Interface -->
+            <div class="cyber-box box-yellow p-2 cursor-pointer group" onclick="openModal('linux/tahap1.png')">
+                <img src="linux/tahap1.png" alt="Samba Installation" class="w-full h-40 object-cover opacity-60 group-hover:opacity-100 transition">
+                <p class="text-[10px] p-2 uppercase text-cyber-yellow">Step 1: configuration /etc/network/interfaces</p>
+            </div>
+
+            <!-- Foto 2: membuat folder  -->
+            <div class="cyber-box box-yellow p-2 cursor-pointer group" onclick="openModal('linux/tahap2.png')">
+                <img src="linux/tahap2.png" alt="Samba Config" class="w-full h-40 object-cover opacity-60 group-hover:opacity-100 transition">
+                <p class="text-[10px] p-2 uppercase text-cyber-yellow">Step 2: Creating Shared Folders</p>
+            </div>
+
+            <!-- Foto 3: User Management -->
+            <div class="cyber-box box-yellow p-2 cursor-pointer group" onclick="openModal('linux/tahap3.png')">
+                <img src="linux/tahap3.png" alt="Samba User" class="w-full h-40 object-cover opacity-60 group-hover:opacity-100 transition">
+                <p class="text-[10px] p-2 uppercase text-cyber-yellow">Step 3: configuration /etc/samba/smb.conf</p>
+            </div>
+
+            <!-- Foto 4: Restart Service -->
+            <div class="cyber-box box-yellow p-2 cursor-pointer group" onclick="openModal('linux/tahap4.png')">
+                <img src="linux/tahap4.png" alt="Service Status" class="w-full h-40 object-cover opacity-60 group-hover:opacity-100 transition">
+                <p class="text-[10px] p-2 uppercase text-cyber-yellow">Step 4: create user and password</p>
+            </div>
+
+            <!-- Foto 5: Client Access -->
+            <div class="cyber-box box-yellow p-2 cursor-pointer group" onclick="openModal('linux/tahap 5.png')">
+                <img src="linux/tahap 5.png" alt="Client Test" class="w-full h-40 object-cover opacity-60 group-hover:opacity-100 transition">
+                <p class="text-[10px] p-2 uppercase text-cyber-yellow">Step 5: go to destination ip use win+r and write \\ip (Result)</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
 <!-- Section Contact -->
 <section id="contact" class="py-24 px-6 bg-black/40">
     <div class="max-w-4xl mx-auto text-center">
